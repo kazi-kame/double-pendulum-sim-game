@@ -1,34 +1,42 @@
 Double Pendulum Chaos Simulator
-A real-time physics simulation of a double pendulum built with Python and Pygame. I made this to visualize chaotic motion and calculate the Lyapunov exponent to measure how chaotic the system actually is.
+
+A real-time physical simulation of a double pendulum system built with Python and Pygame. This application visualizes chaotic motion and quantifies chaos using a numerical estimation of the largest Lyapunov exponent.
+
 Features
 
-Physics Engine: Implements Lagrangian mechanics with 4th-order Runge-Kutta (RK4) integration for accurate results
-Chaos Analysis: Calculates the Largest Lyapunov Exponent in real-time using the Wolf algorithm with shadow trajectories
-Interactive Controls: Live sliders to adjust rod lengths, masses, gravity, and damping
-Fluid Damping: Built-in presets for Air, Water, Oil, and Honey environments
+Physics Engine: Uses Lagrangian mechanics solved via 4th-order Runge-Kutta (RK4) integration for high numerical stability.
+
+Chaos Analysis: Real-time calculation of the Largest Lyapunov Exponent (LLE) using the shadow trajectory method (Wolf algorithm).
+
+Interactive Controls: Adjust lengths, masses, gravity, and damping coefficients on the fly.
+
+Fluid Damping: Presets for simulating motion in Air, Water, Oil, and Honey.
+
 Visualization:
 
-Live pendulum animation with motion trails
-Phase space trajectory plot
-Real-time angle vs. time graphs
+Real-time animation of the pendulum system.
 
+Phase space trajectory plotting.
 
+Time-series graphs for angular displacement.
 
 Prerequisites
 
-Python 3.6 or higher
-pip package manager
+Python 3.6+
+
+pip (Python package manager)
 
 Installation
 
-Clone this repo:
+Clone the repository (or download the source code):
 
-bashgit clone <repository-url>
+git clone <repository-url>
 cd double-pendulum-sim
 
-Create a virtual environment (optional but recommended):
 
-bash# Windows
+Set up a virtual environment (Recommended):
+
+# Windows
 python -m venv venv
 venv\Scripts\activate
 
@@ -36,41 +44,51 @@ venv\Scripts\activate
 python3 -m venv venv
 source venv/bin/activate
 
+
 Install dependencies:
 
-bashpip install -r requirements.txt
+pip install -r requirements.txt
+
+
 Usage
-Just run:
-bashpython main.py
-The simulation starts paused so you can adjust the initial conditions first.
+
+Run the main simulation script:
+
+python main.py
+
+
+Note: Replace main.py with whatever you named your script file.
+
 Controls
 
-Play/Pause Button: Start or stop the simulation
-Reset Button: Resets everything back to the slider values
-Fluid Button: Cycles through different damping presets (Air → Water → Oil → Honey → Custom)
-Sliders (only adjustable when paused):
+The simulation starts in a Paused state to allow initial configuration.
 
-L1/L2: Rod lengths in meters
-M1/M2: Bob masses in kilograms
-Gravity: Acceleration due to gravity (m/s²)
-Damping: Friction coefficient (editable only in Custom mode)
-Init θ1/θ2: Starting angles for each pendulum
+Play/Pause: Toggle the simulation loop.
 
+Reset: Stop simulation and reset angles/velocities to initial slider values.
 
+Fluid Button: Cycle through damping presets (Air, Water, Oil, Honey, Custom).
 
-How It Works
-The double pendulum is a classic example of a chaotic system - tiny changes in starting conditions create wildly different outcomes. The physics is based on Euler-Lagrange equations, which I solve numerically using RK4 integration.
-To measure chaos, I calculate the Lyapunov exponent (λ). Here's the approach:
+Sliders:
 
-Run the main simulation normally
-Run a second "shadow" simulation with an initial difference of just 10⁻⁸ radians
-Track how fast these two trajectories diverge over time
+L1/L2: Length of the rods (m).
 
-A positive λ means the system is chaotic - the bigger the value, the faster trajectories diverge. The "Lyapunov Time" shown in the app tells you roughly how long predictions stay accurate before chaos takes over.
-What I Learned
-This project helped me understand:
+M1/M2: Mass of the bobs (kg).
 
-How chaotic systems work in practice
-Numerical integration methods (RK4 is way better than Euler!)
-The Wolf algorithm for calculating Lyapunov exponents
-Building interactive physics simulations with Pygame
+Gravity: Acceleration due to gravity ($m/s^2$).
+
+Damping: Friction coefficient (only active in "Custom" fluid mode).
+
+Init θ1/θ2: Initial release angles.
+
+Physics Background
+
+The system is modeled using the Euler-Lagrange equations for a double pendulum. Because the system is chaotic, slight deviations in initial conditions lead to exponentially diverging trajectories.
+
+To calculate the Lyapunov exponent ($\lambda$), the simulation tracks two systems simultaneously:
+
+The main system ($S_1$).
+
+A shadow system ($S_2$) initialized with a perturbation of $10^{-8}$.
+
+$\lambda$ is estimated by monitoring the rate of separation between these two trajectories over time. A positive $\lambda$ indicates chaotic behavior.
