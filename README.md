@@ -1,4 +1,5 @@
-Double Pendulum Chaos Simulator
+#Double Pendulum Chaos Simulator
+
 
 A real-time physical simulation of a double pendulum system built with Python and Pygame. This application visualizes chaotic motion and quantifies chaos using a numerical estimation of the largest Lyapunov exponent.
 
