@@ -1,5 +1,4 @@
-#Double Pendulum Chaos Simulator
-
+# Double Pendulum Chaos Simulator
 
 A real-time physical simulation of a double pendulum system built with Python and Pygame. This application visualizes chaotic motion and quantifies chaos using a numerical estimation of the largest Lyapunov exponent.
 
@@ -82,7 +81,7 @@ Damping: Friction coefficient (only active in "Custom" fluid mode).
 
 Init θ1/θ2: Initial release angles.
 
-Physics Background
+# Footnote
 
 The system is modeled using the Euler-Lagrange equations for a double pendulum. Because the system is chaotic, slight deviations in initial conditions lead to exponentially diverging trajectories.
 
