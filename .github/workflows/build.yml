@@ -22,7 +22,6 @@ jobs:
         
     - name: Build with PyInstaller
       run: |
-        # Using the correct filename: double_pendulum_game.py
         pyinstaller --onefile --windowed --hidden-import=pygame --name DoublePendulum double_pendulum_game.py
         
     - name: Upload Release Asset
