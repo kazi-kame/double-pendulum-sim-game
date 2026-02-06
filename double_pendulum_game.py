@@ -1,3 +1,5 @@
+!pip install numpy pygame math scipy
+
 import pygame
 import math
 import sys
