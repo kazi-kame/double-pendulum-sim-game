@@ -54,10 +54,10 @@ Usage
 
 Run the main simulation script:
 
-python main.py
+python double_pendulum_game.py
 
 
-Note: Replace main.py with whatever you named your script file.
+Note: Replace double_pendulum_game.py with whatever you named your script file.
 
 Controls
 
