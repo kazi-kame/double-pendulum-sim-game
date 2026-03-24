@@ -32,6 +32,8 @@ Clone the repository (or download the source code):
 
 ``
 git clone (https://github.com/kazi-kame/double-pendulum-sim-game)
+``
+``
 cd double-pendulum-sim
 ``
 
