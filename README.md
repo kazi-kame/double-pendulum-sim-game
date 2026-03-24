@@ -30,9 +30,10 @@ Installation
 
 Clone the repository (or download the source code):
 
-git clone <repository-url>
+``
+git clone (https://github.com/kazi-kame/double-pendulum-sim-game)
 cd double-pendulum-sim
-
+``
 
 Set up a virtual environment (Recommended):
 
