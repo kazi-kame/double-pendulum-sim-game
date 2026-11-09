@@ -30,37 +30,36 @@ Installation
 
 Clone the repository (or download the source code):
 
-``
+````
 git clone (https://github.com/kazi-kame/double-pendulum-sim-game)
-``
-``
+
 cd double-pendulum-sim
-``
+````
 
 Set up a virtual environment (Recommended):
 
 # Windows
-``
+````
 python -m venv venv
 venv\Scripts\activate
-``
+````
 # macOS/Linux
-``
+````
 python3 -m venv venv
 source venv/bin/activate
-``
+````
 
 Install dependencies:
-``
+````
 pip install -r requirements.txt
-``
+````
 
 Usage
 
 Run the main simulation script:
-``
+````
 python double_pendulum_game.py
-``
+````
 
 Note: Replace double_pendulum_game.py with whatever you named your script file.
 
