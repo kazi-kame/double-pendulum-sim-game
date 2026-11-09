@@ -2,6 +2,10 @@
 
 A real-time physical simulation of a double pendulum system built with Python and Pygame. This application visualizes chaotic motion and quantifies chaos using a numerical estimation of the largest Lyapunov exponent.
 
+<tr>
+  <td><img src="assets/sim_game.gif" width="800"></td>
+</tr>
+
 Features
 
 Physics Engine: Uses Lagrangian mechanics solved via 4th-order Runge-Kutta (RK4) integration for high numerical stability.
